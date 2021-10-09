@@ -1,0 +1,1 @@
+QuickNote\@Resources\Vars.inc | QuickNote\@Resources\Bools.inc
