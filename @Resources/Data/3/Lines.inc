@@ -1,0 +1,22 @@
+[Variables]
+Line1=Left click to edit
+LIne2=Right click to copy
+Line3=Drag to switch rows
+Line4=Top buttons for adding and removing rows
+Line5=Drag from top left to summon
+Line6=Or use the hotkey
+Line7=
+Line8=
+Line9=
+Line10=
+Line11=
+Line12=
+Line13=
+Line14=
+Line15=
+Line16=
+Line17=
+Line18=
+Line19=
+Line20=
+Line21=

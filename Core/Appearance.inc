@@ -8,6 +8,13 @@ Meter=String
 X=r
 Text=Font face
 MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:Ss1231231]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option02]
+Meter=String
+Text=Skin scale
+MeterStyle=Set.String:S | Set.OptionName:S
 
 ;================================================================================================================================================================================
 
@@ -18,14 +25,21 @@ MeterStyle=Set.String:S |  Set.OptionCat:S
 
 [Option11]
 Meter=String
-Text=Animation
+Text=Summoning animation
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:Ss]
 Meter=Shape
 MeterStyle=Set.Div:S
 [Option12]
 Meter=String
-Text=Animation duration
+Text=Summon animation duration
+MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:S123]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option13]
+Meter=String
+Text=Transitional animation
 MeterStyle=Set.String:S | Set.OptionName:S
 
 
@@ -86,6 +100,14 @@ Y=([Option01:Y]-#Set.P#+(-30/2+8)*[Set.S])
 Meter=String
 Text=#FontFace#
 MeterStyle=Set.String:S | Set.Value:S
+[Scale]
+Meter=Shape
+MeterStyle=Set.Textbox:S
+Y=([Option02:Y]-#Set.P#+(-30/2+8)*[Set.S])
+[Value02]
+Meter=String
+Text=#Scale#
+MeterStyle=Set.String:S | Set.Value:S
 
 [Animation]
 Meter=Shape
@@ -101,6 +123,11 @@ Meter=String
 Text=#TweenTime1#
 MeterStyle=Set.String:S | Set.Value:S
 
+
+[TransitionalAnimations]
+Meter=Shape
+MeterStyle=Set.Bool:S
+Y=([Option13:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [Maincolor]
 Meter=Shape

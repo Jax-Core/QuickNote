@@ -1,0 +1,22 @@
+[Variables]
+Line1=Jot notes easily and quickly
+LIne2=Organize content with built-in manipulation tools
+Line3=Enable checklist to keep track of your activities
+Line4=
+Line5=
+Line6=Top choice for productivity
+Line7=
+Line8=
+Line9=
+Line10=
+Line11=
+Line12=
+Line13=
+Line14=
+Line15=
+Line16=
+Line17=
+Line18=
+Line19=
+Line20=
+Line21=

@@ -20,7 +20,7 @@ X=r
 Y=(20*[Set.S])R
 W=(650*[Set.S])
 H=(150*[Set.S])
-ImageName=#@#Images\QuickNoteLayout\#CURRENTSECTIOn#.png
+ImageName=#SKINSPATH##Skin.Name#\Core\ColorScheme\#CURRENTSECTIOn#.png
 DynamicVariables=1
 ImageAlpha=200
 MouseOverAction=[!SetOption #CURRENTSECTION# ImageAlpha "255"][!UpdateMeter #CURRENTSECTION#][!Redraw]
@@ -53,6 +53,10 @@ Meter=Image
 MeterStyle=Select:S
 
 [Dracula]
+Meter=Image
+MeterStyle=Select:S
+
+[Kimi]
 Meter=Image
 MeterStyle=Select:S
 

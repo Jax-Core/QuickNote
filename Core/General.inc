@@ -13,7 +13,7 @@ Meter=Shape
 MeterStyle=Set.Div:S
 [Option02]
 Meter=String
-Text=Use this hotkey in addition to dragging top left of window
+Text=Use this hotkey in addition to dragging from top left of the screen
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:1238]
 Meter=Shape
@@ -36,13 +36,6 @@ Meter=String
 Text=Behavior
 MeterStyle=Set.String:S |  Set.OptionCat:S
 
-[Option11]
-Meter=String
-Text=Automatically switch to next line upon entering
-MeterStyle=Set.String:S | Set.OptionName:S
-[Set.Div:Ss]
-Meter=Shape
-MeterStyle=Set.Div:S
 [Option12]
 Meter=String
 Text=Show checklist dots
@@ -84,10 +77,10 @@ Meter=String
 Text=#ScreenPadding#
 MeterStyle=Set.String:S | Set.Value:S
 
-[AutoNextLine]
-Meter=Shape
-MeterStyle=Set.Bool:S
-Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
+; [AutoNextLine]
+; Meter=Shape
+; MeterStyle=Set.Bool:S
+; Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [CheckDots]
 Meter=Shape

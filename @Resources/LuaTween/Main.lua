@@ -69,6 +69,8 @@ function Initialize()
     redrawTimes = 2
     -- redraw cache
     redrawsLeft = 0
+    -- ended actions checker
+    ended = 1
     
     -- Initializes all the tweens
     InitAllTweens()
@@ -87,6 +89,11 @@ function Update()
     if redraw then 
         redrawsLeft = redrawTimes
         redraw = false
+    else
+        if ended == 0 then 
+            SKIN:Bang(SELF:GetOption("FinishAction", ""))
+            ended = 1
+        end
     end
 
     if redrawsLeft > 0 then
@@ -103,6 +110,7 @@ end
 
 -- Plays the tween forwards
 function Start(index, ...)
+    ended = 0
     local inRange = false
     for _,v in pairs(tweenTypes) do
         inRange = v.Start(index, ...) or inRange
