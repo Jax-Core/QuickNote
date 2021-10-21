@@ -1,7 +1,7 @@
 [Variables]
-Line1=
-LIne2=
-Line3=
+Line1=English writing or book or whatever
+LIne2=IdleStyle add hotkey to toggle
+Line3=Study Chemistry
 Line4=
 Line5=
 Line6=

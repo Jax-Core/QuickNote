@@ -9,7 +9,7 @@ MeterStyle=Div:S
 [1]
 Meter=String
 MeterStyle=String:S
-Text=Notes
+Text=To-do
 [12]
 Meter=Shape
 MeterStyle=Div:S

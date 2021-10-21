@@ -3,10 +3,19 @@ Meter=String
 Text=Activation
 MeterStyle=Set.String:S | Set.OptionCat:S
 
-[Option01]
+
+[Option00]
 Meter=String
 X=r
+Text=Use the skin as widget
+MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:S191]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option01]
+Meter=String
 Text=HotKey
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:S19131238]
 Meter=Shape
@@ -14,20 +23,15 @@ MeterStyle=Set.Div:S
 [Option02]
 Meter=String
 Text=Use this hotkey in addition to dragging from top left of the screen
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:1238]
 Meter=Shape
 MeterStyle=Set.Div:S
 [Option03]
 Meter=String
-Text=Amount of drag required to start
-MeterStyle=Set.String:S | Set.OptionName:S
-[Set.Div:S191]
-Meter=Shape
-MeterStyle=Set.Div:S
-[Option04]
-Meter=String
-Text=Distance of panel from screen edge
+Text=Distance of panel from top edge
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 ;================================================================================================================================================================================
 
@@ -44,37 +48,39 @@ MeterStyle=Set.String:S | Set.OptionName:S
 
 ;================================================================================================================================================================================
 
+
+[StayOnDesktop]
+Meter=Shape
+MeterStyle=Set.Bool:S
+Y=([Option00:Y]-#Set.P#+(-20/2+8)*[Set.S])
+
 [Button01]
 Meter=Shape
 MeterStyle=Set.Button:S
 Y=([Option01:Y]-#Set.P#+(-30/2+8)*[Set.S])
+Hidden=#StayOnDesktop#
 Act=[!CommandMeasure Func "startSide('Hotkey')"]
 [Value01]
 Meter=String
 Text=#KeyInString#
+Hidden=#StayOnDesktop#
 MeterStyle=Set.String:S | Set.Value:S
 
 [UseHotkey]
 Meter=Shape
 MeterStyle=Set.Bool:S
+Hidden=#StayOnDesktop#
 Y=([Option02:Y]-#Set.P#+(-20/2+8)*[Set.S])
-
-[DragAmount]
-Meter=Shape
-MeterStyle=Set.Textbox:S
-Y=([Option03:Y]-#Set.P#+(-30/2+8)*[Set.S])
-[Value03]
-Meter=String
-Text=#DragAmount#
-MeterStyle=Set.String:S | Set.Value:S
 
 [ScreenPadding]
 Meter=Shape
 MeterStyle=Set.Textbox:S
-Y=([Option04:Y]-#Set.P#+(-30/2+8)*[Set.S])
-[Value04]
+Hidden=#StayOnDesktop#
+Y=([Option03:Y]-#Set.P#+(-30/2+8)*[Set.S])
+[Value03]
 Meter=String
 Text=#ScreenPadding#
+Hidden=#StayOnDesktop#
 MeterStyle=Set.String:S | Set.Value:S
 
 ; [AutoNextLine]

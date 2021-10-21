@@ -1,3 +1,31 @@
+function Initialize()
+    local UseHotkey = tonumber(SKIN:GetVariable('UseHotkey'))
+    local CheckDots = tonumber(SKIN:GetVariable('CheckDots'))
+    local StayOnDesktop = tonumber(SKIN:GetVariable('StayOnDesktop'))
+    local Resource = SKIN:GetVariable('@')
+    if CheckDots == 1 then 
+        SKIN:Bang('!DisableMouseActionGroup', 'LeftMouseUpAction', 'Stroke')
+        SKIN:Bang('!UpdateMEterGroup', 'Stroke')
+    end
+    if StayOnDesktop == 1 then
+        SKIN:Bang('!Draggable', '1')
+        SKIN:Bang('!ZPos', '0')
+        SKIN:Bang('!KeepOnScreen', '0')
+        SKIN:Bang('!DisableMeasure', 'mToggleSet')
+        SKIN:Bang('!DisableMeasure', 'mToggle')
+        SKIN:Bang('!DisableMeasure', 'MeasureIsFullScreen')
+        SKIN:Bang('!Execute [\"#@#Actions\\AHKv1.exe\" \"#@#Actions\\Source Code\\Close.ahk\"]')
+    else
+        SKIN:Bang('!Move', '0', '0')
+        SKIN:Bang('!Draggable', '0')
+        SKIN:Bang('!ZPos', '1')
+        SKIN:Bang('!KeepOnScreen', '1')
+        if UseHotkey == 1 then
+            SKIN:Bang('!Execute [\"#@#Actions\\AHKv1.exe\" \"#@#Actions\\Source Code\\QuickNote.ahk\"]')
+        end
+    end
+end
+
 function CheckFullScreen()
     local MyMeasure = SKIN:GetMeasure('MeasureIsFullScreen')
     local mString = MyMeasure:GetStringValue()

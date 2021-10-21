@@ -85,8 +85,15 @@ MeterStyle=String:S | Note:S
 [Bool14]
 Meter=Shape
 Y=((70+30*13)*#Scale#)
-Shape=Line 0,(25*#scale#),(#W#-#P#*2),(25*#scale#) | StrokeWidth 0
 MeterStyle=Stroke:S
 [Line14]
+Meter=String
+MeterStyle=String:S | Note:S
+[Bool15]
+Meter=Shape
+Y=((70+30*14)*#Scale#)
+Shape=Line 0,(25*#scale#),(#W#-#P#*2),(25*#scale#) | StrokeWidth 0
+MeterStyle=Stroke:S
+[Line15]
 Meter=String
 MeterStyle=String:S | Note:S
