@@ -242,8 +242,8 @@ function startDrop(variant, handler, offset)
 	local File = SKIN:GetVariable('ROOTCONFIGPATH')..'Main\\Accessories\\Drop.ini'
 	local MyMeter = SKIN:GetMeter(handler)
 	local scale = tonumber(SKIN:GetVariable('Scale'))
-    local PosX = MyMeter:GetX() + offset * scale
-    local PosY = MyMeter:GetY() + offset * scale
+    local PosX = SKIN:GetX() + MyMeter:GetX() + offset * scale
+    local PosY = SKIN:GetY() + MyMeter:GetY() + offset * scale
 	SKIN:Bang('!WriteKeyvalue', 'Variables', 'Sec.name', skin, File)
 	SKIN:Bang('!WriteKeyvalue', 'Variables', 'Sec.Variant', variant, File)
 	SKIN:Bang('!WriteKeyvalue', 'Variables', 'Sec.S', scale, File)

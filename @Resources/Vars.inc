@@ -1,6 +1,7 @@
 [Variables]
 Scale=1
 UseHotkey=1
+HideOnStart=1
 StayOnDesktop=0
 
 DragAmount=1
@@ -23,4 +24,4 @@ FontColor=242,240,255
 AccentColor=242, 52, 0
 BoolColor=242, 52, 0
 
-rows=15
+rows=14

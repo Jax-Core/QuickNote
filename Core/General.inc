@@ -25,25 +25,33 @@ Meter=String
 Text=Use this hotkey in addition to dragging from top left of the screen
 FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
-[Set.Div:1238]
+[Set.Div:12]
 Meter=Shape
 MeterStyle=Set.Div:S
 [Option03]
+Meter=String
+Text=Automatically hide on startup (doesn't affect refreshes)
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
+MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:1238]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option04]
 Meter=String
 Text=Distance of panel from top edge
 FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 ;================================================================================================================================================================================
 
-[Time]
-Meter=String
-Text=Behavior
-MeterStyle=Set.String:S |  Set.OptionCat:S
+; [Time]
+; Meter=String
+; Text=Behavior
+; MeterStyle=Set.String:S |  Set.OptionCat:S
 
-[Option12]
-Meter=String
-Text=Show checklist dots
-MeterStyle=Set.String:S | Set.OptionName:S
+; [Option12]
+; Meter=String
+; Text=Show checklist dots
+; MeterStyle=Set.String:S | Set.OptionName:S
 
 
 ;================================================================================================================================================================================
@@ -72,12 +80,19 @@ MeterStyle=Set.Bool:S
 Hidden=#StayOnDesktop#
 Y=([Option02:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
+[HideOnStart]
+Meter=Shape
+MeterStyle=Set.Bool:S
+Hidden=#StayOnDesktop#
+Y=([Option03:Y]-#Set.P#+(-20/2+8)*[Set.S])
+
 [ScreenPadding]
 Meter=Shape
 MeterStyle=Set.Textbox:S
 Hidden=#StayOnDesktop#
-Y=([Option03:Y]-#Set.P#+(-30/2+8)*[Set.S])
-[Value03]
+Type=Num|0|50
+Y=([Option04:Y]-#Set.P#+(-30/2+8)*[Set.S])
+[Value04]
 Meter=String
 Text=#ScreenPadding#
 Hidden=#StayOnDesktop#
@@ -88,10 +103,10 @@ MeterStyle=Set.String:S | Set.Value:S
 ; MeterStyle=Set.Bool:S
 ; Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
-[CheckDots]
-Meter=Shape
-MeterStyle=Set.Bool:S
-Y=([Option12:Y]-#Set.P#+(-20/2+8)*[Set.S])
+; [CheckDots]
+; Meter=Shape
+; MeterStyle=Set.Bool:S
+; Y=([Option12:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 ;================================================================================================================================================================================
 [Input:M]
