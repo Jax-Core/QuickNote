@@ -2,12 +2,14 @@
 Scale=1
 UseHotkey=1
 HideOnStart=1
+EfficiencyHotkey=1
 StayOnDesktop=0
 
 DragAmount=1
 ScreenPadding=30
+R=10
 
-Animation=1
+Animation=0
 TransitionalAnimations=1
 TweenTime1=600
 

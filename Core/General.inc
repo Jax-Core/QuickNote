@@ -14,7 +14,7 @@ Meter=Shape
 MeterStyle=Set.Div:S
 [Option01]
 Meter=String
-Text=HotKey
+Text=Use hotkey in addition to dragging from top left of the screen
 FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:S19131238]
@@ -22,15 +22,15 @@ Meter=Shape
 MeterStyle=Set.Div:S
 [Option02]
 Meter=String
-Text=Use this hotkey in addition to dragging from top left of the screen
-FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
+Text=Activation hotKey
+FontColor=#Set.Text_Color#,(255-150*(#StayOnDesktop# || (1-#UseHotkey#) = 1 ? 1 : 0))
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:12]
 Meter=Shape
 MeterStyle=Set.Div:S
 [Option03]
 Meter=String
-Text=Automatically hide on startup (doesn't affect refreshes)
+Text=Automatically hide on startup (doesn't affect refreshes)1
 FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 MeterStyle=Set.String:S | Set.OptionName:S
 [Set.Div:1238]
@@ -38,9 +38,9 @@ Meter=Shape
 MeterStyle=Set.Div:S
 [Option04]
 Meter=String
-Text=Distance of panel from top edge
-FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
+Text=Efficiency Hotkeys#CRLF#- Use tab to move to next line#CRLF#- use number keys to quickly edit rows 1-9
 MeterStyle=Set.String:S | Set.OptionName:S
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
 ;================================================================================================================================================================================
 
 ; [Time]
@@ -62,23 +62,23 @@ Meter=Shape
 MeterStyle=Set.Bool:S
 Y=([Option00:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
-[Button01]
-Meter=Shape
-MeterStyle=Set.Button:S
-Y=([Option01:Y]-#Set.P#+(-30/2+8)*[Set.S])
-Hidden=#StayOnDesktop#
-Act=[!CommandMeasure Func "startSide('Hotkey')"]
-[Value01]
-Meter=String
-Text=#KeyInString#
-Hidden=#StayOnDesktop#
-MeterStyle=Set.String:S | Set.Value:S
-
 [UseHotkey]
 Meter=Shape
 MeterStyle=Set.Bool:S
 Hidden=#StayOnDesktop#
-Y=([Option02:Y]-#Set.P#+(-20/2+8)*[Set.S])
+Y=([Option01:Y]-#Set.P#+(-20/2+8)*[Set.S])
+
+[Button02]
+Meter=Shape
+MeterStyle=Set.Button:S
+Y=([Option02:Y]-#Set.P#+(-30/2+8)*[Set.S])
+Hidden=(#StayOnDesktop# || (1-#UseHotkey#) = 1 ? 1 : 0)
+Act=[!CommandMeasure Func "startSide('Hotkey')"]
+[Value01]
+Meter=String
+Text=#KeyInString#
+Hidden=(#StayOnDesktop# || (1-#UseHotkey#) = 1 ? 1 : 0)
+MeterStyle=Set.String:S | Set.Value:S
 
 [HideOnStart]
 Meter=Shape
@@ -86,22 +86,11 @@ MeterStyle=Set.Bool:S
 Hidden=#StayOnDesktop#
 Y=([Option03:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
-[ScreenPadding]
+[EfficiencyHotkey]
 Meter=Shape
-MeterStyle=Set.Textbox:S
+MeterStyle=Set.Bool:S
 Hidden=#StayOnDesktop#
-Type=Num|0|50
-Y=([Option04:Y]-#Set.P#+(-30/2+8)*[Set.S])
-[Value04]
-Meter=String
-Text=#ScreenPadding#
-Hidden=#StayOnDesktop#
-MeterStyle=Set.String:S | Set.Value:S
-
-; [AutoNextLine]
-; Meter=Shape
-; MeterStyle=Set.Bool:S
-; Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
+Y=([Option04:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 ; [CheckDots]
 ; Meter=Shape

@@ -16,7 +16,7 @@ MeterStyle=Div:S
 [2]
 Meter=String
 MeterStyle=String:S
-Text=Right click to rename
+Text=Poll
 [13]
 Meter=Shape
 MeterStyle=Div:S
@@ -30,11 +30,11 @@ MeterStyle=Div:S
 [4]
 Meter=String
 MeterStyle=String:S
-Text=Quick Note
+Text=Right click to rename
 [15]
 Meter=Shape
 MeterStyle=Div:S
 [5]
 Meter=String
 MeterStyle=String:S
-Text=To-do
+Text=Testing ground

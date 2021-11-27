@@ -3,7 +3,7 @@ function Initialize()
     local CheckDots = tonumber(SKIN:GetVariable('CheckDots'))
     local StayOnDesktop = tonumber(SKIN:GetVariable('StayOnDesktop'))
     local Resource = SKIN:GetVariable('@')
-    if CheckDots == 1 then 
+    if CheckDots == 0 then 
         SKIN:Bang('!DisableMouseActionGroup', 'LeftMouseUpAction', 'Stroke')
         SKIN:Bang('!UpdateMEterGroup', 'Stroke')
     end
@@ -24,6 +24,15 @@ function Initialize()
             SKIN:Bang('!Execute [\"#@#Actions\\AHKv1.exe\" \"#@#Actions\\Source Code\\QuickNote.ahk\"]')
         end
     end
+
+    if tonumber(SKIN:GetVariable('EfficiencyHotkey')) == 0 or tonumber(SKIN:GetVariable('StayOnDesktop')) == 1 then
+        print('Turning off efficiency hotkeys...')
+        for i=1, 9 do
+            SKIN:Bang('!CommandMeasure', 'Key'..i, 'Stop')
+        end
+    end
+    SKIN:Bang('!CommandMEasure', 'KeyTab', 'Stop')
+    -- SKIN:Bang('!CommandMEasure', 'KeyShiftTab', 'Stop')
 end
 
 function CheckFullScreen()
@@ -41,6 +50,47 @@ function CheckFullScreen()
     else
         SKIN:Bang('!Show')
     end
+end
+
+-- -------------------------------------------------------------------------- --
+--                              Hotkey functions                              --
+-- -------------------------------------------------------------------------- --
+
+function turnHotkey(bool)
+    if tonumber(SKIN:GetVariable('EfficiencyHotkey')) == 1 and tonumber(SKIN:GetVariable('StayOnDesktop')) == 0 then
+        if bool == 1 then
+            for i=1, 9 do
+                SKIN:Bang('!CommandMeasure', 'Key'..i, 'Start')
+            end
+        else
+            for i=1, 9 do   
+                SKIN:Bang('!CommandMeasure', 'Key'..i, 'Stop')
+            end
+        end
+    end
+end
+
+function tabControl(bool)
+    if tonumber(SKIN:GetVariable('EfficiencyHotkey')) == 1 and tonumber(SKIN:GetVariable('StayOnDesktop')) == 0 then
+        if bool == 1 then
+            SKIN:Bang('!CommandMeasure', 'KeyTab', 'Start')
+            -- SKIN:Bang('!CommandMEasure', 'KeyShiftTab', 'Start')
+        else
+            SKIN:Bang('!CommandMeasure', 'KeyTab', 'Stop')
+            -- SKIN:Bang('!CommandMEasure', 'KeyShiftTab', 'Stop')
+        end
+    end
+end
+
+function editNextLine(dir)
+    local CurrentLine = SKIN:GetVariable('Editing'):gsub('Line', '')
+    local NextLine = CurrentLine + dir
+    print(CurrentLine, NextLine)
+    SKIN:Bang('!PauseMeasure', 'mToggle')
+    SKIN:Bang('!SetVariable', 'Editing', 'Line'..NextLine)
+    SKIN:Bang('!SetOption', 'mInput', 'X', SKIN:GetMeter('Line'..NextLine):GetX())
+    SKIN:Bang('!SetOption', 'mInput', 'Y', SKIN:GetMeter('Line'..NextLine):GetY())
+    SKIN:Bang('!UpdateMeasure', 'mOpenInput')
 end
 
 -- -------------------------------------------------------------------------- --

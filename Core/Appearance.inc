@@ -15,6 +15,21 @@ MeterStyle=Set.Div:S
 Meter=String
 Text=Skin scale
 MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:12123138]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option03]
+Meter=String
+Text=Corner rounding
+MeterStyle=Set.String:S | Set.OptionName:S
+[Set.Div:1238]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option04]
+Meter=String
+Text=Distance of panel from top edge
+FontColor=#Set.Text_Color#,(255-150*#StayOnDesktop#)
+MeterStyle=Set.String:S | Set.OptionName:S
 
 ;================================================================================================================================================================================
 
@@ -109,6 +124,26 @@ Y=([Option02:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value02]
 Meter=String
 Text=#Scale#
+MeterStyle=Set.String:S | Set.Value:S
+[R]
+Meter=Shape
+MeterStyle=Set.Textbox:S
+Type=Num|0|30
+Y=([Option03:Y]-#Set.P#+(-30/2+8)*[Set.S])
+[Value03]
+Meter=String
+Text=#R#
+MeterStyle=Set.String:S | Set.Value:S
+[ScreenPadding]
+Meter=Shape
+MeterStyle=Set.Textbox:S
+Hidden=#StayOnDesktop#
+Type=Num|0|50
+Y=([Option04:Y]-#Set.P#+(-30/2+8)*[Set.S])
+[Value04]
+Meter=String
+Text=#ScreenPadding#
+Hidden=#StayOnDesktop#
 MeterStyle=Set.String:S | Set.Value:S
 
 [Animation]
