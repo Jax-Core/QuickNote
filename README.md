@@ -4,11 +4,12 @@
 
 <h4 align="center">Quick access notepad.</h4>
 
-
+![QuickNote](https://user-images.githubusercontent.com/80020581/143665831-67707bcd-66e1-4e94-a7f3-9f0abd6889e5.png)
 
 ## Description
 
 Smooth animations ● Easy row manipulation ● Multiple pages ● Add and remove rows ● Color schemes ● Easy customization
+
 A quick access notepad, which you can use it as a wdiget or summon it by either dragging from the top left corner of the screen or by a hotkey press. 
 
 # Installation
