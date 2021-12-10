@@ -1,13 +1,13 @@
 [Variables]
-Line1=Merge all skins
-LIne2=Update idlestyle
-Line3=Fix keylaunch general
-Line4=Stop skins from showing up at refresh
-Line5=Store graphics separately
-Line6=Update mplayers along with mvis
-Line7=Write chinese stuff + tutor work
-Line8=
-Line9=
+Line1=Write chinese stuff + tutor work
+LIne2=Chemistry Homework
+Line3=
+Line4=
+Line5=Fix idle style toast
+Line6=Stop skins from showing up at refresh
+Line7=Add keylaunch reset button
+Line8=Update mplayers along with mvis
+Line9=Update idlestyle
 Line10=
 Line11=
 Line12=
