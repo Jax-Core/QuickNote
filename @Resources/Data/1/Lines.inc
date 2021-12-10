@@ -1,11 +1,11 @@
 [Variables]
-Line1=English writing or book or whatever
-LIne2=IdleStyle add hotkey to toggle
-Line3=Study Chemistry
-Line4=
-Line5=
-Line6=
-Line7=
+Line1=Merge all skins
+LIne2=Update idlestyle
+Line3=Fix keylaunch general
+Line4=Stop skins from showing up at refresh
+Line5=Store graphics separately
+Line6=Update mplayers along with mvis
+Line7=Write chinese stuff + tutor work
 Line8=
 Line9=
 Line10=

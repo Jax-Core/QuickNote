@@ -31,7 +31,7 @@ DynamicVariables=1
 MaskImageName=#@#Images\LayoutMask.png
 Container=ContentContainer
 [Selected:S]
-Fill=Fill Color 255,255,255,255
+Fill=Fill Color #Set.Text_Color#,255
 ImageAlpha=255
 MouseOverAction=
 MouseLeaveAction=

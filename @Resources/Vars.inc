@@ -16,7 +16,7 @@ TweenTime1=600
 FontFace=Poppins
 IconName=Todo
 ; AutoNextLine=0
-CheckDots=1
+CheckDots=0
 DataSource=1
 
 Maincolor=12,12,12
