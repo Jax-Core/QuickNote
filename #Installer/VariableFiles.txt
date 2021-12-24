@@ -1,1 +1,11 @@
-@Resources\Vars.inc | @Resources\Data\1\1Bools.inc | @Resources\Data\1\Lines.inc | @Resources\Data\2\1Bools.inc | @Resources\Data\2\Lines.inc | @Resources\Data\3\1Bools.inc | @Resources\Data\3\Lines.inc | @Resources\Data\4\1Bools.inc | @Resources\Data\4\Lines.inc | @Resources\Data\5\1Bools.inc | @Resources\Data\5\Lines.inc
+@Resources\Vars.inc
+@Resources\Data\1\1Bools.inc
+@Resources\Data\1\Lines.inc
+@Resources\Data\2\1Bools.inc
+@Resources\Data\2\Lines.inc
+@Resources\Data\3\1Bools.inc
+@Resources\Data\3\Lines.inc
+@Resources\Data\4\1Bools.inc
+@Resources\Data\4\Lines.inc
+@Resources\Data\5\1Bools.inc
+@Resources\Data\5\Lines.inc
