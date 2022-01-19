@@ -88,7 +88,7 @@ QuickNote includes 8 color scheme presets. You enable them by just selecting the
 - Nord Dark
 - Light (Jax is currently in bad boy prison for adding this option)
 
-- **Note:** You can also make your own custom schemes through the **Appearance** tab.
+You can also make your own custom schemes through the **Appearance** tab.
 
 ## Help
 - Join the [Core Community Discord Server](https://discord.gg/JmgehPSDD6) for more help.
