@@ -1,4 +1,4 @@
-[Values]
+[@Resources\Vars.inc]
 Maincolor=36,36,36
 SecColor=54,54,54
 StrokeColor=60,60,60
